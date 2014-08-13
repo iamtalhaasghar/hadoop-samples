@@ -1,4 +1,4 @@
-package com.hadoopsample;
+package com.hadoopsample.samples;
 
 import java.io.IOException;
 import java.util.Iterator;
