@@ -1,7 +1,5 @@
 
 
-
-
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.StringTokenizer;
@@ -22,7 +20,7 @@ import org.apache.hadoop.mapred.Reporter;
 import org.apache.hadoop.mapred.TextInputFormat;
 import org.apache.hadoop.mapred.TextOutputFormat;
 
-public class WordCountSample {
+public class WordCounter {
 
 	public static class Map extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {
 
@@ -51,7 +49,7 @@ public class WordCountSample {
 	}
 
 	public static void main(String[] args) throws Exception {
-		JobConf conf = new JobConf(WordCountSample.class);
+		JobConf conf = new JobConf(WordCounter.class);
 		conf.setJobName("wordcount");
 
 		conf.setOutputKeyClass(Text.class);
