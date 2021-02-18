@@ -1,4 +1,6 @@
+Screen.class
+Screen$WebPageDownloader.class
+Map.class
 Scraper.class
-WordCounter$Map.class
-WordCounter$Reduce.class
+Reduce.class
 WordCounter.class

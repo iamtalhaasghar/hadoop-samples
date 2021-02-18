@@ -19,7 +19,7 @@ import org.jsoup.select.Elements;
  * @author programmer
  */
 public class Scraper {
-    public static void downloadWebPage(String url){
+    public void downloadWebPage(String url){
         String text = "";
         try {
             Document document = Jsoup.connect(url).get();
@@ -48,14 +48,12 @@ public class Scraper {
         }
     }
     
-    public static void saveText(String filename, String text){
+    private void saveText(String filename, String text){
         try (FileWriter fout = new FileWriter(filename)) {
             fout.write(text);
         } catch (IOException ex) {
             Logger.getLogger(Scraper.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public static void main(String[] args) {
-       Scraper.downloadWebPage("https://en.wikipedia.org/wiki/Pakistan");
-    }
+    
 }
